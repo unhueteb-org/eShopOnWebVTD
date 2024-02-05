@@ -82,14 +82,14 @@ jobs:
         enable-AzPSSession: true
            
     # Deploy Azure WebApp using Bicep file
-    - name: deploy
-      uses: azure/arm-deploy@v1
-      with:
-        subscriptionId: ${{ env.SUBSCRIPTION-ID }}
-        resourceGroupName: ${{ env.RESOURCE-GROUP }}
-        template: bicep-template/webapp.bicep
-        parameters: 'webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}'
-        failOnStdErr: false   
+    # - name: deploy
+    #   uses: azure/arm-deploy@v1
+    #   with:
+    #     subscriptionId: ${{ env.SUBSCRIPTION-ID }}
+    #     resourceGroupName: ${{ env.RESOURCE-GROUP }}
+    #     template: bicep-template/webapp.bicep
+    #     parameters: 'webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}'
+    #     failOnStdErr: false   
     
     # Publish website to Azure App Service (WebApp)
     - name: Publish Website to WebApp
